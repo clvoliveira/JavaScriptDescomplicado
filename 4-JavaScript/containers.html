@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Elementos Containers</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+    function login() {
+      var nome = prompt("Qual o seu nome?",
+        "Zé Ninguém");
+      resultado.innerHTML = "Olá, " +
+        nome.toUpperCase() + ".";
+    }
+    </script>
+    <h1>Identificação</h1>
+    <input type="button" value="Login" onclick="login()">
+    <hr>
+    <div id="resultado">Olá.</div>
+  </body>
+</html>

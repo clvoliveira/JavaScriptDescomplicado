@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Caixas de Diálogo e Mensagem</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+    function login() {
+      var nome = prompt("Qual o seu nome?",
+        "Zé Ninguém");
+      alert("Olá, " + nome.toUpperCase() +
+        ".");
+    }
+    </script>
+    <h1>Identificação</h1>
+    <input type="button" value="Login" onclick="javascript:login()">
+  </body>
+</html>

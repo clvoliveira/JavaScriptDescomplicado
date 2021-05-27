@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Requisição de Dados</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+    function obterValor(chave) {
+      url = window.location.href;
+      chave = chave.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + chave + '(=([^&#]*)|&|#|$)');
+      var res = regex.exec(url);
+      if (!res) 
+        return null;
+      if (!res[2]) 
+        return '';
+      return decodeURIComponent(res[2].replace(/\+/g, ' '));
+    }
+
+    function lerFormulario() {
+      var nome = obterValor("nome");
+      var email = obterValor("email");
+      var texto = "Nome: <b>" + nome + "</b><br>" +
+        "E-mail: <b>" + email + "</b><br>";
+      resultado.innerHTML = texto;
+    }
+    </script>
+  </head>
+  <body onload="lerFormulario()">
+    <h1>Requisição de Dados</h1>
+    <div id="resultado"></div>
+  </body>
+</html>

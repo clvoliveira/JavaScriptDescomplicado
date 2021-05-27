@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Olá jQuery</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      $("#aqui").click(function () {
+        alert("Olá " + $("#nome").val());
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <h1>Olá jQuery</h1>
+    Qual o seu nome?
+    <input type="text" id="nome" /><br />
+    <input type="button" id="aqui" value="Clique aqui!" />
+  </body>
+</html>

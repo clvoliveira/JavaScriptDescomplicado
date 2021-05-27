@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript" src="calculadora.js"></script>
+    <h2>Calculadora</h2>
+    <table bgcolor="#BBBBBB" border="0" cellpadding="3" cellspacing="0" summary="">
+      <tr>
+        <td colspan="4">
+          <input type="text" id="res" value="0" size="12" readonly>
+          <input type="hidden" id="v1" value="0">
+          <input type="hidden" id="op" value="">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" id="off" value="Off" onclick='retornar()'></td>
+        <td><input type="button" id="lim" value=" C " onclick='limpar()'></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><input type="button" id="d7" value=" 7 " onclick='digito("7")'></td>
+        <td><input type="button" id="d8" value=" 8 " onclick='digito("8")'></td>
+        <td><input type="button" id="d9" value=" 9 " onclick='digito("9")'></td>
+        <td><input type="button" id="div" value="  / " onclick='operacao("/")'></td>	
+      </tr>
+      <tr>
+        <td><input type="button" id="d4" value=" 4 " onclick='digito("4")'></td>
+        <td><input type="button" id="d5" value=" 5 " onclick='digito("5")'></td>
+        <td><input type="button" id="d6" value=" 6 " onclick='digito("6")'></td>
+        <td><input type="button" id="mul" value=" X " onclick='operacao("X")'></td>	
+      </tr>
+      <tr>
+        <td><input type="button" id="d1" value=" 1 " onclick='digito("1")'></td>
+        <td><input type="button" id="d2" value=" 2 " onclick='digito("2")'></td>
+        <td><input type="button" id="d3" value=" 3 " onclick='digito("3")'></td>
+        <td><input type="button" id="sub" value="  - " onclick='operacao("-")'></td>	
+      </tr>
+      <tr>
+        <td><input type="button" id="d0" value=" 0 " onclick='digito("0")'></td>
+        <td><input type="button" id="sep" value="  , " onclick='separador()'></td>
+        <td><input type="button" id="tot" value=" = " onclick='total()'></td>	
+        <td><input type="button" id="adi" value=" + "  onclick='operacao("+")'></td>
+      </tr>
+    </table>
+  </body>
+</html>

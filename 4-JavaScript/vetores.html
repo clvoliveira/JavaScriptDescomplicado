@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Montadoras</title>
+    <meta charset="UTF-8">
+  </head>
+  <body onload="exibir()">
+    <script type="text/javascript">
+    function exibir() {
+      var montadora = new Array("Fiat",
+        "Ford", "General Motors",
+        "Honda", "Nissan", "Renault",
+        "Volkswagen");
+      document.write("<h1>Montadoras</h1>");
+      for (i = 0; i < montadora.length; i++)
+        document.write(montadora[i] +
+          "<br>");
+    }
+    </script>
+  </body>
+</html>

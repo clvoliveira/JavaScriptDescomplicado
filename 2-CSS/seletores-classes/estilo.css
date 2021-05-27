@@ -1,0 +1,13 @@
+#fundo {
+  background-color: #808080;
+  padding: 20px;
+}
+
+#titulo {
+  color: lime;
+}
+
+.texto {
+  color: lightcyan;
+  font-weight: bold;
+}

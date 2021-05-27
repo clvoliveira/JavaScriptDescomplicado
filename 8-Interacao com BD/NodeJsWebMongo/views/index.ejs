@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Produtos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <!-- Versão minimizada do CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- Versão minimizada do JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    
+    <!-- AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Versão minimizada do Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    
+    <!-- Versão minimizada do Boostrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script src="scripts/frontend.js" type="application/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Produtos</h1>
+      <input type="button" class="btn btn-primary" value="Novo..." onclick="incluir()">
+      <table class="table table-hover">
+        <tr class="table-primary">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>Código</td>
+          <td>Descrição</td>
+          <td>Preço</td>
+        </tr>
+        <% dados.forEach(function(item) { %>
+        <tr>
+          <td>
+            <img src="images/editar.png" width="24" onclick="editar(<%= item.codigo %>)" alt="Editar"/>
+          </td>
+          <td>
+            <img src="images/deletar.png" width="24" onclick="deletar(<%= item.codigo %>)" alt="Deletar"/>
+          </td>
+          <td><%= item.codigo %></td>
+          <td><%= item.descricao %></td>
+          <td align="right"><%= item.preco.toFixed(2) %></td>
+        </tr>
+        <% }) %>
+      </table>
+
+      <!-- Modal -->
+      <div class="modal" id="caixa-dialogo">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Cadastro de Produto</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <form id="form-produto">
+              <input type="hidden" id="oper" value="i" />
+              <div id="mensagem" class="modal-body">
+                <div class="form-group">
+                  Código:
+                  <input type="text" id="cod" class="form-control"  maxlength="3" />
+                </div>
+                <div class="form-group">
+                  Descrição:
+                  <input type="text" id="desc" class="form-control" maxlength="20" />
+                </div>
+                <div class="form-group">
+                  Preço Unitário:
+                  <input type="text" id="preco" class="form-control" maxlength="10" />           
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Salvar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      
+      <!-- Modal -->
+      <div class="modal" id="caixa-confirmacao">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Atenção</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div id="mensagem" class="modal-body">
+              Você tem certeza que deseja apagar este produto?
+            </div>    
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" id="sim-deletar">Sim</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+    </div>
+  </body>
+</html>

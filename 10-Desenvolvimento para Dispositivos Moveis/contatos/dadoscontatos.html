@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lista de Contatos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item *ngFor="var contato of contatos" tappable (click)="verTelefone(contato)">
+    <h1>{{contato.nome}}</h1>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interação entre páginas</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+    function abrirCalc() {
+      window.open('calculadora-completa.html', 'Calculadora', 'toolbar=no, \
+location=no,directories=no,status=no,menubar=no, \
+scrollbars=no,resizable=no,menubar=no,top=250,left=450, \
+width=200,height=300');
+    }
+    </script>
+    <h1> Interação entre páginas</h1>
+    Digite um valor ou utilize a
+    <input type="button" onclick="abrirCalc()" value="calculadora">:
+    <input type="text" id="valor" value="0">
+  </body>
+</html>

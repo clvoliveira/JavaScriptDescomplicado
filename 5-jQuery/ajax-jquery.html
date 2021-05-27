@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A ligeira raposa</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#mais").click(function(){
+        $.ajax({url: "conteudo.txt", success: function(resultado){
+          $("#info").html(resultado);
+        }});
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <h1>A ligeira raposa</h1>
+    A ligeira raposa marrom salta sobre o cão preguiçoso. <input type="button" id="mais" value="Mais informações" />
+    <div id="info"></div>
+  </body>
+</html>

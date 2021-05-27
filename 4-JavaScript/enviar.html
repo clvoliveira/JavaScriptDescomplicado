@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Envio de Dados</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+    function gerarURL() {
+      window.location ="receber.html?nome=" +
+nome.value + "&email=" + email.value;
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Envio de Dados</h1>
+    Nome: <input type="text" id="nome" size="20"><br> 
+    Email: <input type="text" id="email" size="20"><br> 
+    <input type="button" value="Enviar" onclick="gerarURL();">
+  </body>
+</html>

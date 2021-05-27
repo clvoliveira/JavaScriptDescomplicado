@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Calculadora Simples
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary"> Digite um número:</ion-label>
+      <ion-input [(ngModel)]="num1" name="num1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary"> Digite um número:</ion-label>
+      <ion-input [(ngModel)]="num2" name="num2"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button size="large" full (click)="somar()"> + </ion-button>
+  <ion-button size="large" full (click)="subtrair()"> - </ion-button>
+  <ion-button size="large" full (click)="dividir()"> / </ion-button>
+  <ion-button size="large" full (click)="multiplicar()"> X</ion-button>
+  <h1> {{resultado}} </h1>
+</ion-content>
